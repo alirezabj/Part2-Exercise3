@@ -52,9 +52,53 @@ Attributes: None
    Signature: `public static void displayResult(double result)`
 
    Preconditions:
-   1. `result >= 0`: The result must be non-negative.
+   1.`result >= 0`: The result must be non-negative.
   
    Postconditions:
-   Prints the result to the console in a user-friendly format.
+   1. Prints the result to the console in a user-friendly format.
+  
+
+### Specifications: 
+
+```java
+/**
+ * Calculates the monthly installment based on the provided principal and loan term.
+ *
+ * @param principal The loan amount (must be positive).
+ * @param loanTerm The loan term in months (must be between 1 and 300).
+ * @return The monthly installment as a double.
+ * @throws IllegalArgumentException if the inputs are invalid.
+ * @.pre principal > 0 && loanTerm > 0 && loanTerm <= 300
+ * @.post RESULT == (principal / loanTerm + principal / 240)
+ */
+public static double calculateMonthlyInstallment(double principal, int loanTerm) throws IllegalArgumentException {
+    if (principal <= 0 || loanTerm <= 0 || loanTerm > 300) {
+        throw new IllegalArgumentException("Invalid inputs: principal must be > 0 and loanTerm must be in range 1-300.");
+    }
+    return principal / loanTerm + principal / 240;
+}
+```
+
+
+```java
+/**
+ * Calculates the monthly installment based on the provided principal and loan term.
+ *
+ * @param principal The loan amount (must be positive).
+ * @param loanTerm The loan term in months (must be between 1 and 300).
+ * @return The monthly installment as a double.
+ * @throws IllegalArgumentException if the inputs are invalid.
+ * @.pre principal > 0 && loanTerm > 0 && loanTerm <= 300
+ * @.post RESULT == (principal / loanTerm + principal / 240)
+ */
+public static double calculateMonthlyInstallment(double principal, int loanTerm) throws IllegalArgumentException {
+    if (principal <= 0 || loanTerm <= 0 || loanTerm > 300) {
+        throw new IllegalArgumentException("Invalid inputs: principal must be > 0 and loanTerm must be in range 1-300.");
+    }
+    return principal / loanTerm + principal / 240;
+}
+```
+
+
 
 
