@@ -68,10 +68,7 @@ Purpose: Handles interactions with the user, ensuring valid inputs and displayin
  * @.pre principal > 0 && loanTerm > 0 && loanTerm <= 300
  * @.post RESULT == (principal / loanTerm + principal / 240)
  */
-public static double calculateMonthlyInstallment(double principal, int loanTerm) throws IllegalArgumentException {
-    
-}
-
+public static double calculateMonthlyInstallment(double principal, int loanTerm) throws IllegalArgumentException 
 ```
 
 #### `getUserInput`
@@ -82,9 +79,7 @@ public static double calculateMonthlyInstallment(double principal, int loanTerm)
  * @.pre true
  * @.post RESULT.length == 2 && RESULT[0] > 0 && RESULT[1] > 0 && RESULT[1] <= 300
  */
-public static double[] getUserInput() {
-
-}
+public static double[] getUserInput() 
 ```
 
 #### `displayResult`
@@ -95,9 +90,7 @@ public static double[] getUserInput() {
  * @.pre result >= 0
  * @.post The result is displayed to the console in a user-friendly format
  */
-public static void displayResult(double result) {
-
-}
+public static void displayResult(double result) 
 ```
 
 
