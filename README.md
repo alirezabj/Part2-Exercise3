@@ -6,9 +6,11 @@ The program will be modeled using two classes:
 
 ## Class: `MortgageCalculator`
 Purpose: Encapsulates the logic for calculating the monthly installment.
+
 Attributes: None 
 
 Methods: `calculateMonthlyInstallment(double principal, int loanTerm)`
+
 Purpose: Calculates the monthly installment for the given principal and loan term.
 
 Signature:`public static double calculateMonthlyInstallment(double principal, int loanTerm) throws IllegalArgumentException`
@@ -28,6 +30,7 @@ Special Cases:
 
 ## Class: `UserInterface`
 Purpose: Handles interactions with the user, ensuring valid inputs and displaying results.
+
 Attributes: None
 
 ### Methods:
