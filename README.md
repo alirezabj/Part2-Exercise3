@@ -32,7 +32,7 @@ Attributes: None
 
 ### Methods:
 1. `getUserInput()`
-  Purpose: Prompts the user to input the principal amount and loan term.
+   Purpose: Prompts the user to input the principal amount and loan term.
 
   Signature:`public static double[] getUserInput()`
 
@@ -59,11 +59,9 @@ Attributes: None
   
 
 ### Specifications: 
-
+#### `calculateMonthlyInstallment`
 ```java
 /**
- * Calculates the monthly installment based on the provided principal and loan term.
- *
  * @param principal The loan amount (must be positive).
  * @param loanTerm The loan term in months (must be between 1 and 300).
  * @return The monthly installment as a double.
@@ -77,25 +75,51 @@ public static double calculateMonthlyInstallment(double principal, int loanTerm)
     }
     return principal / loanTerm + principal / 240;
 }
+
 ```
 
-
+#### `getUserInput`
 ```java
 /**
- * Calculates the monthly installment based on the provided principal and loan term.
- *
- * @param principal The loan amount (must be positive).
- * @param loanTerm The loan term in months (must be between 1 and 300).
- * @return The monthly installment as a double.
- * @throws IllegalArgumentException if the inputs are invalid.
- * @.pre principal > 0 && loanTerm > 0 && loanTerm <= 300
- * @.post RESULT == (principal / loanTerm + principal / 240)
+ * @return An array containing the principal and loan term as [principal, loanTerm].
+ * @.pre true
+ * @.post RESULT.length == 2 && RESULT[0] > 0 && RESULT[1] > 0 && RESULT[1] <= 300
  */
-public static double calculateMonthlyInstallment(double principal, int loanTerm) throws IllegalArgumentException {
-    if (principal <= 0 || loanTerm <= 0 || loanTerm > 300) {
-        throw new IllegalArgumentException("Invalid inputs: principal must be > 0 and loanTerm must be in range 1-300.");
+public static double[] getUserInput() {
+    Scanner scanner = new Scanner(System.in);
+    double principal = 0;
+    int loanTerm = 0;
+    boolean valid = false;
+
+    while (!valid) {
+        try {
+            System.out.print("Enter the loan principal amount: ");
+            principal = Double.parseDouble(scanner.nextLine());
+            System.out.print("Enter the loan term in months (1-300): ");
+            loanTerm = Integer.parseInt(scanner.nextLine());
+
+            if (principal > 0 && loanTerm > 0 && loanTerm <= 300) {
+                valid = true;
+            } else {
+                System.out.println("Invalid inputs. Please ensure principal > 0 and loan term is between 1 and 300.");
+            }
+        } catch (NumberFormatException e) {
+            System.out.println("Invalid input format. Please enter valid numbers.");
+        }
     }
-    return principal / loanTerm + principal / 240;
+    return new double[]{principal, loanTerm};
+}
+```
+
+#### `displayResult`
+```java
+/**
+ * @param result The calculated monthly installment.
+ * @.pre result >= 0
+ * @.post The result is displayed to the console in a user-friendly format.
+ */
+public static void displayResult(double result) {
+    System.out.printf("The monthly installment is: %.2f%n", result);
 }
 ```
 
