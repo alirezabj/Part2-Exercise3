@@ -62,6 +62,7 @@ Attributes: None
 #### `calculateMonthlyInstallment`
 ```java
 /**
+ * Calculates the monthly installment based on the provided principal and loan term.
  * @param principal The loan amount (must be positive).
  * @param loanTerm The loan term in months (must be between 1 and 300).
  * @return The monthly installment as a double.
@@ -81,6 +82,7 @@ public static double calculateMonthlyInstallment(double principal, int loanTerm)
 #### `getUserInput`
 ```java
 /**
+ * Prompts the user for principal and loan term.
  * @return An array containing the principal and loan term as [principal, loanTerm].
  * @.pre true
  * @.post RESULT.length == 2 && RESULT[0] > 0 && RESULT[1] > 0 && RESULT[1] <= 300
@@ -114,6 +116,7 @@ public static double[] getUserInput() {
 #### `displayResult`
 ```java
 /**
+ * Displays the calculated monthly installment to the user.
  * @param result The calculated monthly installment.
  * @.pre result >= 0
  * @.post The result is displayed to the console in a user-friendly format.
@@ -122,6 +125,15 @@ public static void displayResult(double result) {
     System.out.printf("The monthly installment is: %.2f%n", result);
 }
 ```
+
+
+
+Therefore the progrm flow is like this: 
+1. The main() method resides in the UserInterface class.
+2. The user is prompted to enter the principal amount and loan term.
+3. Inputs are validated to ensure they meet the preconditions.
+4. The calculateMonthlyInstallment method in MortgageCalculator is called to compute the monthly installment.
+5. The result is displayed to the user via the displayResult method.
 
 
 
