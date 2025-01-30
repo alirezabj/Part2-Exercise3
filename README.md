@@ -65,8 +65,8 @@ Purpose: Handles interactions with the user, ensuring valid inputs and displayin
 #### `calculateMonthlyInstallment`
 ```java
 /**
- * Calculates the monthly installment based on the provided principal and loan term
- * @param principal The loan amount (must be positive)
+ * Calculate the monthly installment based on the provided principal and loan term
+ * @param principal The loan amount which must be positive
  * @param loanTerm The loan term in months (must be between 1 and 300)
  * @return The monthly installment as a double
  * @throws IllegalArgumentException if the inputs are invalid
@@ -79,8 +79,8 @@ public static double calculateMonthlyInstallment(double principal, int loanTerm)
 #### `getUserInput`
 ```java
 /**
- * Prompts the user for principal and loan term
- * @return An array containing the principal and loan term as [principal, loanTerm]
+ * Prompt the user for principal and loan term
+ * Return an array containing the principal and loan term as [principal, loanTerm]
  * @.pre true
  * @.post RESULT.length == 2 && RESULT[0] > 0 && RESULT[1] > 0 && RESULT[1] <= 300
  */
@@ -90,10 +90,10 @@ public static double[] getUserInput()
 #### `displayResult`
 ```java
 /**
- * Displays the calculated monthly installment to the user
+ * Display the calculated monthly installment to the user
  * @param result The calculated monthly installment
  * @.pre result >= 0
- * @.post The result is displayed to the console in a user-friendly format
+ * @.post The result is displayed to the console in a user friendly format
  */
 public static void displayResult(double result) 
 ```
