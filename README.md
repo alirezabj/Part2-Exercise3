@@ -57,7 +57,7 @@ Purpose: Handles interactions with the user, ensuring valid inputs and displayin
   
    Postconditions:
    
-   1. Prints the result to the console in a user-friendly format.
+   1. Prints the result to the console in a user friendly format.
   
 
 ### Specifications: 
