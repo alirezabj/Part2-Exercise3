@@ -43,7 +43,7 @@ Purpose: Handles interactions with the user, ensuring valid inputs and displayin
   2. Prints an error message and reprompts the user if inputs are invalid.
    
   Special Cases:
-  1. If the user doesnt enter numerical data, reprompt until valid input is entered.
+  1. If the user doesnt enter numerical data, prompt again until valid input is entered.
 
 `displayResult(double result)`
 
