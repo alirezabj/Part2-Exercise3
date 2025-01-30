@@ -1,6 +1,6 @@
 # Part2-Exercise3
 
-The program will be modeled using two classes:
+The program will be developed using two classes:
 1. `MortgageCalculator`: Handles the logic of calculating the monthly installment
 2. `UserInterface`: Manages user input and output 
 
