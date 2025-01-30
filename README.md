@@ -104,7 +104,7 @@ Therefore the progrm flow is like this:
 2. The user is prompted to enter the principal amount and loan term.
 3. Inputs are validated to ensure they meet the preconditions.
 4. The calculateMonthlyInstallment method in MortgageCalculator is called to compute the monthly installment.
-5. The result is displayed to the user via the displayResult method.
+5. The result is displayed to the user using the displayResult method.
 
 
 
