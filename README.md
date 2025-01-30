@@ -31,6 +31,7 @@ Purpose: Handles interactions with the user, ensuring valid inputs and displayin
 
 ### Methods:
 `getUserInput()`
+   
    Purpose: Prompts the user to input the principal amount and loan term.
 
   Signature:`public static double[] getUserInput()`
