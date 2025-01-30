@@ -80,7 +80,7 @@ public static double calculateMonthlyInstallment(double principal, int loanTerm)
 ```java
 /**
  * Prompt the user for principal and loan term
- * Return an array containing the principal and loan term as [principal, loanTerm]
+ * @return an array containing the principal and loan term as [principal, loanTerm]
  * @.pre true
  * @.post RESULT.length == 2 && RESULT[0] > 0 && RESULT[1] > 0 && RESULT[1] <= 300
  */
